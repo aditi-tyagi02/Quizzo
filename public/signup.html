@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>SIGN UP</h2>
+        <form class="signup-form" id="signupForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <input type="submit" value="Sign Up" id="signupButton">
+        </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Perform form validation if needed
+            let fullName = document.querySelector("input[placeholder='Full Name']").value.trim();
+            let email = document.querySelector("input[placeholder='Email']").value.trim();
+            let password = document.querySelector("input[placeholder='Password']").value;
+            let confirmPassword = document.querySelector("input[placeholder='Confirm Password']").value;
+
+            // Example of basic validation (you can extend this)
+            if (fullName === '' || email === '' || password === '' || confirmPassword === '') {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // If validation passes, redirect to desired page (e.g., login page)
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
