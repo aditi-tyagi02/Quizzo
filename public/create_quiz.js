@@ -70,3 +70,7 @@ function saveQuiz() {
 }
 
 export { addQuestion, saveQuiz };
+
+window.addQuestion = addQuestion;
+window.saveQuiz = saveQuiz;
+
