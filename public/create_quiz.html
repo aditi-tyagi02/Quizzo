@@ -104,13 +104,5 @@
     <script type="module" src="fb.js"></script>
     <!-- Include the script handling quiz creation and saving -->
     <script type="module" src="create_quiz.js"></script>
-    <!-- Include inline script for handling UI interactions -->
-    <script type="module">
-        import { addQuestion, saveQuiz } from './create_quiz.js';
-
-        // Attach functions to the global scope for button onclick events
-        window.addQuestion = addQuestion;
-        window.saveQuiz = saveQuiz;
-    </script>
 </body>
 </html>
